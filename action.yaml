@@ -13,6 +13,10 @@ inputs:
     description: "User Password"
     required: true
     default: ""
+  script:
+    description: "Script to Run"
+    required: true
+    default: ""
 runs:
   using: "docker"
   image: "Dockerfile"
@@ -20,3 +24,4 @@ runs:
     - ${{ inputs.host }}
     - ${{ inputs.user }}
     - ${{ inputs.password }}
+    - ${{ inputs.script }}
