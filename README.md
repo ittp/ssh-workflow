@@ -1,21 +1,28 @@
-# Hello world docker action
+# SSH GA Workflow
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action runs a script, passed as an argument, on a system that's connected to via parameters also passed to the workflow.
 
 ## Inputs
 
-## `who-to-greet`
+### Host
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** - The hostname of the system to connect to.
 
-## Outputs
+### User
 
-## `time`
+**Required** - The user name of the account to connect to the system with.
 
-The time we greeted you.
+### Password
 
-## Example usage
+**Required** - The password of the account to connect to the system with.
 
-uses: actions/hello-world-docker-action@v1
-with:
-who-to-greet: 'Mona the Octocat'
+## Example Usage
+
+```
+uses: ./custom-workflow
+    with:
+        host: host.domain.com
+        user: myUsername
+        password: myPassword
+        script: "echo This Workflow is Awesome!"
+```
