@@ -1,5 +1,9 @@
 name: "andrewtwydell/ssh"
 description: "SSH Workflow"
+author: "AndrewTwydell"
+branding:
+  icon: "chevron-up"
+  color: "gray-dark"
 inputs:
   host:
     description: "SSH Host"
