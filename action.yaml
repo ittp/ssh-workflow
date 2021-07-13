@@ -1,4 +1,4 @@
-name: "SSH"
+name: "andrewtwydell/ssh"
 description: "SSH Workflow"
 inputs:
   host:
