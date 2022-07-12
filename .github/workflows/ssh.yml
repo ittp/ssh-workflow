@@ -1,10 +1,8 @@
 name: Docker Image CI
 
+
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
 
@@ -38,7 +36,7 @@ jobs:
         # the allowed cipher algorithms. If unspecified then a sensible
      #   cipher: # optional
         # timeout for ssh to host
-        timeout: 60 # optional, default is 30s
+        timeout: 60s # optional, default is 30s
         # timeout for ssh command
         command_timeout: 10m # optional, default is 10m
         # content of ssh private key. ex raw content of ~/.ssh/id_rsa
