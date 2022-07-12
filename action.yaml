@@ -1,6 +1,6 @@
-name: "andrewtwydell/ssh"
+name: "ittp/ssh-workflow"
 description: "SSH Workflow"
-author: "AndrewTwydell"
+author: "ittp"
 branding:
   icon: "chevron-up"
   color: "gray-dark"
@@ -10,17 +10,21 @@ inputs:
     required: true
     default: ""
   user:
-    description: "User name"
+    description: "User"
     required: true
-    default: ""
+    default: "root"
   password:
-    description: "User Password"
+    description: "Password"
     required: true
     default: ""
   script:
     description: "Script to Run"
     required: true
     default: ""
+  port:
+    description: "Port"
+    required: true
+    default: "22"
 runs:
   using: "docker"
   image: "Dockerfile"
@@ -29,3 +33,4 @@ runs:
     - ${{ inputs.user }}
     - ${{ inputs.password }}
     - ${{ inputs.script }}
+    - ${{ inputs.port }}
