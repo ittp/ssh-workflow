@@ -4,6 +4,7 @@ author: "ittp"
 branding:
   icon: "chevron-up"
   color: "gray-dark"
+env: []
 inputs:
   host:
     description: "SSH Host"
